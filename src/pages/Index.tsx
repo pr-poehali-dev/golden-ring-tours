@@ -159,54 +159,86 @@ export default function Index() {
             <button onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Галерея</button>
             <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Контакты</button>
           </div>
-          <Button onClick={() => scrollToSection('contact')} className="bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold shadow-lg hover:shadow-xl transition-all">
-            <Icon name="Phone" size={16} className="mr-2" />
-            Позвонить
-          </Button>
+          <a href="tel:+74951234567" className="flex items-center gap-2 text-[#D4AF37] hover:text-[#B8941F] transition-colors font-semibold">
+            <Icon name="Phone" size={18} />
+            <span className="hidden lg:inline">+7 (495) 123-45-67</span>
+          </a>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-6 text-center text-white">
-          <div className="max-w-4xl mx-auto animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
-              <Icon name="Award" size={20} className="text-[#D4AF37]" />
-              <span className="text-sm font-medium">Премиум туры по историческим местам России</span>
+      <section className="relative pt-20 pb-32 md:pt-32 md:pb-40 overflow-hidden bg-gradient-to-br from-[#F5F1E8] via-white to-[#F5F1E8]">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 px-4 py-2 rounded-full mb-6">
+                <Icon name="Sparkles" size={18} className="text-[#D4AF37]" />
+                <span className="text-sm font-semibold text-[#D4AF37]">Премиум туры с 2010 года</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-playfair leading-tight text-[#1A1F2C]">
+                Золотое кольцо<br />
+                <span className="text-[#D4AF37]">в стиле VIP</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+                Откройте величие древних русских городов на автомобиле премиум-класса с персональным гидом-экспертом
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <Button onClick={() => scrollToSection('tours')} size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg px-8 h-14 font-semibold shadow-lg hover:shadow-xl transition-all">
+                  Подобрать тур
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
+                </Button>
+                <Button onClick={() => scrollToSection('contact')} size="lg" variant="outline" className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white text-lg px-8 h-14 font-semibold">
+                  <Icon name="Phone" size={20} className="mr-2" />
+                  Связаться с нами
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6">
+                <div>
+                  <div className="text-3xl font-bold text-[#D4AF37] font-playfair mb-1">500+</div>
+                  <div className="text-sm text-gray-600">Довольных клиентов</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-[#D4AF37] font-playfair mb-1">14</div>
+                  <div className="text-sm text-gray-600">Лет опыта</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-[#D4AF37] font-playfair mb-1">100%</div>
+                  <div className="text-sm text-gray-600">Индивидуально</div>
+                </div>
+              </div>
             </div>
-            
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 font-playfair leading-tight">
-              Путешествие<br />по <span className="text-[#D4AF37]">Золотому кольцу</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Откройте величие древних русских городов в комфорте автомобиля премиум-класса с персональным гидом
-            </p>
-            
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button onClick={() => scrollToSection('tours')} size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg px-10 py-7 font-semibold shadow-2xl hover:shadow-[#D4AF37]/50 transition-all hover:scale-105">
-                Подобрать тур
-                <Icon name="ArrowRight" size={22} className="ml-3" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#1A1F2C] text-lg px-10 py-7 backdrop-blur-sm bg-white/10">
-                <Icon name="Play" size={22} className="mr-3" />
-                Смотреть видео
-              </Button>
+
+            {/* Right Image */}
+            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/d76c9079-d4f3-492d-81f2-a1d21a0969fd.jpg"
+                  alt="Золотое кольцо"
+                  className="w-full h-[500px] md:h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              
+              {/* Floating Card */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center">
+                    <Icon name="Award" className="text-[#D4AF37]" size={24} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-[#1A1F2C]">Лучшее качество</div>
+                    <div className="text-sm text-gray-600">Рейтинг 4.9 из 5</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <Icon name="ChevronDown" size={32} className="text-white/70" />
         </div>
       </section>
 
