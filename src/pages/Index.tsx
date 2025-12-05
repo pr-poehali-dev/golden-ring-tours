@@ -9,6 +9,20 @@ import Icon from '@/components/ui/icon';
 
 export default function Index() {
   const [activeRoute, setActiveRoute] = useState(0);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const tours = [
     {
@@ -140,12 +154,12 @@ export default function Index() {
             </span>
           </div>
           <div className="hidden md:flex gap-8 items-center">
-            <a href="#tours" className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Туры</a>
-            <a href="#routes" className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Маршруты</a>
-            <a href="#gallery" className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Галерея</a>
-            <a href="#contact" className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Контакты</a>
+            <button onClick={() => scrollToSection('tours')} className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Туры</button>
+            <button onClick={() => scrollToSection('routes')} className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Маршруты</button>
+            <button onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Галерея</button>
+            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-[#D4AF37] transition-colors font-medium">Контакты</button>
           </div>
-          <Button className="bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold shadow-lg hover:shadow-xl transition-all">
+          <Button onClick={() => scrollToSection('contact')} className="bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold shadow-lg hover:shadow-xl transition-all">
             <Icon name="Phone" size={16} className="mr-2" />
             Позвонить
           </Button>
@@ -179,7 +193,7 @@ export default function Index() {
             </p>
             
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg px-10 py-7 font-semibold shadow-2xl hover:shadow-[#D4AF37]/50 transition-all hover:scale-105">
+              <Button onClick={() => scrollToSection('tours')} size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg px-10 py-7 font-semibold shadow-2xl hover:shadow-[#D4AF37]/50 transition-all hover:scale-105">
                 Подобрать тур
                 <Icon name="ArrowRight" size={22} className="ml-3" />
               </Button>
@@ -274,7 +288,7 @@ export default function Index() {
                         {tour.price}
                       </div>
                     </div>
-                    <Dialog>
+                    <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
                       <DialogTrigger asChild>
                         <Button className="bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold shadow-lg hover:shadow-xl transition-all px-6">
                           Забронировать
@@ -283,18 +297,22 @@ export default function Index() {
                       <DialogContent className="sm:max-w-[500px]">
                         <DialogHeader>
                           <DialogTitle className="text-2xl font-playfair">
-                            Бронирование тура
+                            Бронирование тура: {tour.title}
                           </DialogTitle>
                           <DialogDescription>
                             Оставьте заявку, и мы свяжемся с вами в течение часа
                           </DialogDescription>
                         </DialogHeader>
-                        <form className="space-y-4 mt-4">
-                          <Input placeholder="Ваше имя" className="h-12" />
-                          <Input type="tel" placeholder="Телефон" className="h-12" />
-                          <Input type="email" placeholder="Email" className="h-12" />
+                        <form className="space-y-4 mt-4" onSubmit={(e) => {
+                          e.preventDefault();
+                          alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
+                          setIsBookingOpen(false);
+                        }}>
+                          <Input placeholder="Ваше имя" className="h-12" required />
+                          <Input type="tel" placeholder="Телефон" className="h-12" required />
+                          <Input type="email" placeholder="Email" className="h-12" required />
                           <Textarea placeholder="Пожелания к туру" rows={4} />
-                          <Button className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold h-12">
+                          <Button type="submit" className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold h-12">
                             Отправить заявку
                           </Button>
                         </form>
@@ -370,7 +388,7 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-              <Button className="bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold shadow-lg hover:shadow-xl transition-all px-8 h-12">
+              <Button onClick={() => setIsBookingOpen(true)} className="bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold shadow-lg hover:shadow-xl transition-all px-8 h-12">
                 Забронировать этот маршрут
                 <Icon name="ArrowRight" size={18} className="ml-2" />
               </Button>
@@ -511,12 +529,16 @@ export default function Index() {
 
             <Card className="border-0 shadow-xl">
               <CardContent className="p-8">
-                <form className="space-y-5">
-                  <Input placeholder="Ваше имя" className="h-12" />
-                  <Input type="tel" placeholder="Телефон" className="h-12" />
-                  <Input type="email" placeholder="Email" className="h-12" />
+                <form className="space-y-5" onSubmit={(e) => {
+                  e.preventDefault();
+                  alert('Спасибо за заявку! Мы свяжемся с вами в течение часа.');
+                  e.currentTarget.reset();
+                }}>
+                  <Input placeholder="Ваше имя" className="h-12" required />
+                  <Input type="tel" placeholder="Телефон" className="h-12" required />
+                  <Input type="email" placeholder="Email" className="h-12" required />
                   <Textarea placeholder="Расскажите о ваших пожеланиях" rows={5} />
-                  <Button className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold h-12 shadow-lg hover:shadow-xl transition-all">
+                  <Button type="submit" className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white font-semibold h-12 shadow-lg hover:shadow-xl transition-all">
                     Отправить заявку
                     <Icon name="Send" size={18} className="ml-2" />
                   </Button>
