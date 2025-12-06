@@ -31,7 +31,7 @@ export default function Index() {
       price: 'от 45 000 ₽',
       duration: '2-7 дней',
       icon: 'Crown',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/44638fd9-ea84-42c6-b566-7672803c8acb.jpg',
+      image: 'https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=800&q=80',
       features: ['Mercedes-Benz S-Class', 'Личный гид-историк', 'Проживание 5★', 'Трансферы включены']
     },
     {
@@ -40,7 +40,7 @@ export default function Index() {
       price: 'от 55 000 ₽',
       duration: '3-5 дней',
       icon: 'ChefHat',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/423cb975-3f13-4e33-9b5a-221f159f5a1d.jpg',
+      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
       features: ['Мастер-классы от шефа', 'Дегустации вин', 'Посещение ферм', 'Эксклюзивные рестораны']
     },
     {
@@ -49,7 +49,7 @@ export default function Index() {
       price: 'от 40 000 ₽',
       duration: '4-6 дней',
       icon: 'Camera',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg',
+      image: 'https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=800&q=80',
       features: ['Фотограф-эксперт', 'Секретные локации', 'Индивидуальный маршрут', 'Обработка фото']
     },
     {
@@ -58,7 +58,7 @@ export default function Index() {
       price: 'от 38 000 ₽',
       duration: '3-7 дней',
       icon: 'Church',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg',
+      image: 'https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80',
       features: ['Духовный наставник', 'Беседы с настоятелями', 'Участие в службах', 'Паломнические места']
     }
   ];
@@ -88,32 +88,32 @@ export default function Index() {
     { 
       title: 'Суздальский кремль', 
       category: 'Архитектура',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
+      image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=800&q=80'
     },
     { 
       title: 'Церковь Покрова на Нерли', 
       category: 'Храмы',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
+      image: 'https://images.unsplash.com/photo-1581263477258-beb6efad31a9?w=800&q=80'
     },
     { 
       title: 'Ярославль, набережная', 
       category: 'Города',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
+      image: 'https://images.unsplash.com/photo-1564181091-1f18b0b3e5ad?w=800&q=80'
     },
     { 
       title: 'Троице-Сергиева Лавра', 
       category: 'Монастыри',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
+      image: 'https://images.unsplash.com/photo-1580670931013-bb0506a9e08b?w=800&q=80'
     },
     { 
       title: 'Владимирские соборы', 
       category: 'Архитектура',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
+      image: 'https://images.unsplash.com/photo-1597250699910-6eef50da52f5?w=800&q=80'
     },
     { 
       title: 'Ростовский кремль', 
       category: 'Памятники',
-      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
+      image: 'https://images.unsplash.com/photo-1589655524737-8c951f52d3c8?w=800&q=80'
     }
   ];
 
