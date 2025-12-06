@@ -376,54 +376,73 @@ export default function Index() {
             </p>
           </div>
 
-          <Card className="max-w-4xl mx-auto border-0 shadow-2xl">
-            <CardHeader>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {routes.map((route, index) => (
-                  <Button
-                    key={index}
-                    onClick={() => setActiveRoute(index)}
-                    variant={activeRoute === index ? 'default' : 'outline'}
-                    className={activeRoute === index ? 'bg-[#D4AF37] hover:bg-[#B8941F] text-white' : 'border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10'}
-                  >
-                    {route.name}
-                  </Button>
-                ))}
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 text-[#D4AF37]">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Clock" size={20} />
-                    <span className="font-semibold">{routes[activeRoute].duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="MapPin" size={20} />
-                    <span className="font-semibold">{routes[activeRoute].cities.length} городов</span>
+          <div className="space-y-12">
+            <div className="flex flex-wrap gap-3 justify-center">
+              {routes.map((route, index) => (
+                <Button
+                  key={index}
+                  onClick={() => setActiveRoute(index)}
+                  variant={activeRoute === index ? 'default' : 'outline'}
+                  className={activeRoute === index ? 'bg-[#D4AF37] hover:bg-[#B8941F] text-white' : 'border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10'}
+                >
+                  {route.name}
+                </Button>
+              ))}
+            </div>
+
+            <Card className="border-0 shadow-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-[#D4AF37]/10 to-[#B8941F]/10">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-2xl font-playfair text-[#1A1F2C]">
+                    {routes[activeRoute].name}
+                  </CardTitle>
+                  <div className="flex items-center gap-4 text-[#D4AF37]">
+                    <div className="flex items-center gap-2">
+                      <Icon name="Clock" size={20} />
+                      <span className="font-semibold">{routes[activeRoute].duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon name="MapPin" size={20} />
+                      <span className="font-semibold">{routes[activeRoute].cities.length} городов</span>
+                    </div>
                   </div>
                 </div>
-                
-                <p className="text-lg text-gray-700">{routes[activeRoute].highlights}</p>
-                
-                <div className="grid md:grid-cols-2 gap-4">
+                <CardDescription className="text-base mt-2">
+                  {routes[activeRoute].highlights}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="flex flex-wrap items-center justify-center gap-3">
                   {routes[activeRoute].cities.map((city, index) => (
-                    <div key={index} className="flex items-center gap-3 bg-[#F5F1E8] rounded-lg p-4 hover:bg-[#D4AF37]/10 transition-colors">
-                      <div className="w-8 h-8 bg-[#D4AF37] text-white rounded-full flex items-center justify-center font-bold text-sm">
-                        {index + 1}
+                    <>
+                      <div 
+                        key={`city-${index}`}
+                        className="flex items-center gap-3 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-white rounded-lg px-6 py-3 font-semibold shadow-md hover:shadow-xl transition-all"
+                      >
+                        <span className="text-lg">{city}</span>
                       </div>
-                      <span className="font-medium text-gray-800">{city}</span>
-                    </div>
+                      {index < routes[activeRoute].cities.length - 1 && (
+                        <Icon 
+                          key={`arrow-${index}`}
+                          name="ArrowRight" 
+                          size={24} 
+                          className="text-[#D4AF37] hidden md:block" 
+                        />
+                      )}
+                    </>
                   ))}
                 </div>
-
-                <Button onClick={() => scrollToSection('contact')} size="lg" className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg h-14">
+                <Button 
+                  onClick={() => scrollToSection('contact')} 
+                  size="lg" 
+                  className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg h-14 mt-8"
+                >
                   Забронировать этот маршрут
                   <Icon name="ArrowRight" size={20} className="ml-2" />
                 </Button>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
