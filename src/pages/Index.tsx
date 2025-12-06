@@ -31,7 +31,7 @@ export default function Index() {
       price: 'от 45 000 ₽',
       duration: '2-7 дней',
       icon: 'Crown',
-      image: 'https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=800&q=80',
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/44638fd9-ea84-42c6-b566-7672803c8acb.jpg',
       features: ['Mercedes-Benz S-Class', 'Личный гид-историк', 'Проживание 5★', 'Трансферы включены']
     },
     {
@@ -40,7 +40,7 @@ export default function Index() {
       price: 'от 55 000 ₽',
       duration: '3-5 дней',
       icon: 'ChefHat',
-      image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/423cb975-3f13-4e33-9b5a-221f159f5a1d.jpg',
       features: ['Мастер-классы от шефа', 'Дегустации вин', 'Посещение ферм', 'Эксклюзивные рестораны']
     },
     {
@@ -49,7 +49,7 @@ export default function Index() {
       price: 'от 40 000 ₽',
       duration: '4-6 дней',
       icon: 'Camera',
-      image: 'https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?w=800&q=80',
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg',
       features: ['Фотограф-эксперт', 'Секретные локации', 'Индивидуальный маршрут', 'Обработка фото']
     },
     {
@@ -58,7 +58,7 @@ export default function Index() {
       price: 'от 38 000 ₽',
       duration: '3-7 дней',
       icon: 'Church',
-      image: 'https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80',
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg',
       features: ['Духовный наставник', 'Беседы с настоятелями', 'Участие в службах', 'Паломнические места']
     }
   ];
@@ -88,32 +88,32 @@ export default function Index() {
     { 
       title: 'Суздальский кремль', 
       category: 'Архитектура',
-      image: 'https://images.unsplash.com/photo-1520106212299-d99c443e4568?w=800&q=80'
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
     },
     { 
       title: 'Церковь Покрова на Нерли', 
       category: 'Храмы',
-      image: 'https://images.unsplash.com/photo-1581263477258-beb6efad31a9?w=800&q=80'
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
     },
     { 
       title: 'Ярославль, набережная', 
       category: 'Города',
-      image: 'https://images.unsplash.com/photo-1564181091-1f18b0b3e5ad?w=800&q=80'
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
     },
     { 
       title: 'Троице-Сергиева Лавра', 
       category: 'Монастыри',
-      image: 'https://images.unsplash.com/photo-1580670931013-bb0506a9e08b?w=800&q=80'
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
     },
     { 
       title: 'Владимирские соборы', 
       category: 'Архитектура',
-      image: 'https://images.unsplash.com/photo-1597250699910-6eef50da52f5?w=800&q=80'
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
     },
     { 
       title: 'Ростовский кремль', 
       category: 'Памятники',
-      image: 'https://images.unsplash.com/photo-1589655524737-8c951f52d3c8?w=800&q=80'
+      image: 'https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/12b5362a-7c92-4001-84d6-ae2b39bc0cbc.jpg'
     }
   ];
 
@@ -167,46 +167,78 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1547448415-e9f5b28e570d?w=1600&q=80)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-6 text-center text-white">
-          <div className="max-w-4xl mx-auto animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/20">
-              <Icon name="Award" size={20} className="text-[#D4AF37]" />
-              <span className="text-sm font-medium">Премиум туры по историческим местам России</span>
+      <section className="relative pt-20 pb-32 md:pt-32 md:pb-40 overflow-hidden bg-gradient-to-br from-[#F5F1E8] via-white to-[#F5F1E8]">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 bg-[#D4AF37]/10 px-4 py-2 rounded-full mb-6">
+                <Icon name="Sparkles" size={18} className="text-[#D4AF37]" />
+                <span className="text-sm font-semibold text-[#D4AF37]">Премиум туры с 2010 года</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-playfair leading-tight text-[#1A1F2C]">
+                Золотое кольцо<br />
+                <span className="text-[#D4AF37]">в стиле VIP</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+                Откройте величие древних русских городов на автомобиле премиум-класса с персональным гидом-экспертом
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <Button onClick={() => scrollToSection('tours')} size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg px-8 h-14 font-semibold shadow-lg hover:shadow-xl transition-all">
+                  Подобрать тур
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
+                </Button>
+                <Button onClick={() => scrollToSection('contact')} size="lg" variant="outline" className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-white text-lg px-8 h-14 font-semibold">
+                  <Icon name="Phone" size={20} className="mr-2" />
+                  Связаться с нами
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6">
+                <div>
+                  <div className="text-3xl font-bold text-[#D4AF37] font-playfair mb-1">500+</div>
+                  <div className="text-sm text-gray-600">Довольных клиентов</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-[#D4AF37] font-playfair mb-1">14</div>
+                  <div className="text-sm text-gray-600">Лет опыта</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-[#D4AF37] font-playfair mb-1">100%</div>
+                  <div className="text-sm text-gray-600">Индивидуально</div>
+                </div>
+              </div>
             </div>
-            
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 font-playfair leading-tight">
-              Путешествие<br />по <span className="text-[#D4AF37]">Золотому кольцу</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-12 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Откройте величие древних русских городов в комфорте автомобиля премиум-класса с персональным гидом
-            </p>
-            
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button onClick={() => scrollToSection('tours')} size="lg" className="bg-[#D4AF37] hover:bg-[#B8941F] text-white text-lg px-10 py-7 font-semibold shadow-2xl hover:shadow-[#D4AF37]/50 transition-all hover:scale-105">
-                Подобрать тур
-                <Icon name="ArrowRight" size={22} className="ml-3" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#1A1F2C] text-lg px-10 py-7 backdrop-blur-sm bg-white/10">
-                <Icon name="Play" size={22} className="mr-3" />
-                Смотреть видео
-              </Button>
+
+            {/* Right Image */}
+            <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://cdn.poehali.dev/projects/c7fef2ff-49f4-4dfe-aa88-82f2fbf56c64/files/d76c9079-d4f3-492d-81f2-a1d21a0969fd.jpg"
+                  alt="Золотое кольцо"
+                  className="w-full h-[500px] md:h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              
+              {/* Floating Card */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center">
+                    <Icon name="Award" className="text-[#D4AF37]" size={24} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-[#1A1F2C]">Лучшее качество</div>
+                    <div className="text-sm text-gray-600">Рейтинг 4.9 из 5</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <Icon name="ChevronDown" size={32} className="text-white/70" />
         </div>
       </section>
 
@@ -302,19 +334,19 @@ export default function Index() {
                         <form className="space-y-4">
                           <div>
                             <label className="text-sm font-medium mb-2 block">Ваше имя</label>
-                            <Input type="text" placeholder="Иван Иванов" />
+                            <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" placeholder="Иван Иванов" />
                           </div>
                           <div>
                             <label className="text-sm font-medium mb-2 block">Телефон</label>
-                            <Input type="tel" placeholder="+7 (999) 123-45-67" />
+                            <input type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" placeholder="+7 (999) 123-45-67" />
                           </div>
                           <div>
                             <label className="text-sm font-medium mb-2 block">Email</label>
-                            <Input type="email" placeholder="email@example.com" />
+                            <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" placeholder="email@example.com" />
                           </div>
                           <div>
                             <label className="text-sm font-medium mb-2 block">Комментарий</label>
-                            <Textarea placeholder="Расскажите о ваших пожеланиях..." className="min-h-[100px]" />
+                            <textarea className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] min-h-[100px]" placeholder="Расскажите о ваших пожеланиях..." />
                           </div>
                           <Button type="submit" className="w-full bg-[#D4AF37] hover:bg-[#B8941F] text-white h-12">
                             Отправить заявку
